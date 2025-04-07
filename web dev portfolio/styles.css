@@ -1,0 +1,408 @@
+html {
+    scroll-padding-top: 100px; 
+}
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    padding: 14px 16px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5rem;
+}
+header li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}
+header li a:hover {
+    background-color: black;
+    padding: 14px 24px;
+}
+.navbar {
+   display: flex;
+   text-align: center;
+   list-style-type: none;
+   justify-content: center;
+}
+
+body {
+    background-color: black;
+}
+#home_introduction {
+    font-size: 3rem;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+.home {
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
+    gap: 5%;
+}
+
+.home h1{
+    color: white;
+    opacity: 0;
+    position: relative;
+    top: 4rem;
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes mymove {
+    from {
+        top: 100px;
+    }
+    to {
+        bottom: 50px;
+        opacity: 1;
+    }
+    
+}  
+.home img {
+    background-image: url(https://github.com/EJTerania/Images-portfolio/blob/main/splash-311140_1280.png?raw=true);
+    background-size: 100%;
+    background-repeat: no-repeat;
+ 
+    position: relative;
+    height: 30rem;
+    width: auto;
+    opacity: 0;
+    top: 50px;
+    animation: imageMove 1s forwards 1s;
+    transition: transform 0.3s ease; 
+}
+
+.home img:hover {
+    transform: scale(1.1); 
+}
+
+@keyframes imageMove {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.about h2{
+    margin-bottom: 0;
+    color: white;
+    font-size: 3rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+.about_content {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.about p {
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.about_content p, .about_content img {
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+.about_content img {
+    background-image: url(https://github.com/EJTerania/Images-portfolio/blob/main/splash-311140_1280.png?raw=true);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30rem;
+    width: auto;
+    position: relative;
+    animation: imgMove 1s forwards 1s;
+    transition: transform 0.3s ease; 
+    animation-delay: 0.5s; 
+}
+
+
+.about_content img:hover {
+    transform: scale(1.1); 
+}
+
+@keyframes imgMove {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+.about_content p {
+    font-family:'Courier New', Courier, monospace;
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+.skills_list { 
+    padding: 5%;
+    background-color: #333; 
+    margin-top: 0;     
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.skills h2{
+    font-size: 3rem;
+    color: white;
+    margin-top: 10rem;
+    text-align: center;
+}
+.skills p {
+    color: white;
+}
+.skills_list img {
+    width: 80px;
+    height: 80px;
+}
+.skills_list div {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+}
+
+.skills_list div:hover {
+    transform: scale(1.1); 
+}
+
+.skills_list div img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.skills_list div:hover img {
+    transform: scale(1.2); 
+}
+
+.skills_list div p {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.skills_context {
+    text-align: center;
+    padding: 3rem;
+    padding-bottom: 0rem;
+}
+
+.skills_resume {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+.skills_resume a {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.skills_resume a:hover {
+    transform: scale(1.1); 
+    background-color: #555; 
+}
+
+.skills_resume a:active {
+    transform: scale(1); 
+}
+.contact {
+    margin-top: 10%;    
+}
+.contact p{
+    color: white;
+text-align: center;
+margin-bottom: 1rem;
+}
+.contact h2{
+    font-size: 3rem;
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    margin-bottom: 2.5%;
+}
+.contact ul {
+    background-color: #333;
+    list-style: none;
+    text-align: center;
+    gap: 5rem;
+    display: flex;   
+    justify-content: center; 
+    padding: 5%;
+}
+
+.contact a {
+    position: relative;
+    color: black;
+    text-decoration: none;    
+}
+.contact img {
+    transition: transform 0.3s ease;
+}
+.contact a:hover img{
+    transform: scale(1.2); 
+
+}
+.contact img {
+    width: 2rem; 
+    height: 2rem; 
+    margin-right: 8px;
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .home, .about_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .home {
+        gap: 5rem;
+    }
+    .about_content img {
+        height: 20rem;
+        width: 20rem;
+    }
+    .home img{
+        height: 20rem;
+        width: 17rem;
+    }
+}
+@media (min-width: 540px) and (max-width: 560px) {
+    .home, .about_content {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    .skills_list {
+        grid-template-columns: 1fr 1fr; 
+    }
+    .about_content img, .home img {
+        height: 15rem;
+    }
+    .about_content p, .skills_list div p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    #home_introduction {
+        font-size: 3rem;
+    }
+    .home{
+        margin-top: 0rem;
+    }
+    .about h2{
+        margin-top: 5rem;
+    }
+    .about_content {
+        flex-direction: column;  
+    }
+    .about_content img {
+        height: 500px;
+        width: 500px;
+    }
+    .skills_list {
+        grid-template-columns: 1fr 1fr);
+    }
+    .home img {
+        height: 15rem;
+    }
+    header {
+        padding: 2rem;
+    }
+    header li a {
+        text-decoration: none;
+        color: white;
+        padding: none;
+    }
+    header li a:hover {
+        background-color: black;
+        padding: 14px 24px;
+    }
+    .home {
+        display: grid;
+        gap: none;
+    }
+    .home h1{
+        z-index: 1;
+        opacity: 0;
+        position: relative;
+        top: 4rem;
+        animation: mymove 1s;
+        animation-fill-mode: forwards;
+    }
+    .home img {
+        z-index: 0;
+    }
+    .about h2{
+        margin-top: 7rem;
+    }
+
+    .about p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .contact {
+        margin-top: 0rem;
+    }
+
+    .skills h2{
+        margin-top: 5rem;
+    }
+
+    .about_content img {
+        height: 300px;
+        width: 300px;
+    }
+  
+    .navbar {
+        display: flex;
+        text-align: center;
+        list-style-type: none;
+        justify-content: center;
+        }
+        .skills_list img {
+            width: 60px;
+            height: 60px;
+        }
+        .skills_resume a {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            position: relative;
+            bottom: 3rem;
+        }
+    }

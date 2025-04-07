@@ -1,0 +1,41 @@
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  background-color: #f3f4f6; 
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.responsive-iframe {
+  width: 100%;
+  max-width: 1200px;  
+  aspect-ratio: 4 / 3; 
+  border: none;
+}
+
+@media (max-height: 1400px) {
+  .calendar-container{
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .responsive-iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 769px) {
+  .responsive-iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-iframe {
+    height: 400px;
+  }
+}
